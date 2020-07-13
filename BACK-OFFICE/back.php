@@ -13,22 +13,22 @@
             <?php if ($_GET['page'] == 'connexion') : ?>
                 <strong><a style="color:#17c1ff" >Connexion</a></strong>
             <?php else : ?>
-                <a href="http://localhost:8888/ISSC%20-%202020/ISCC-2020-mydevblog/BACK-OFFICE/back.php?page=connexion">Connexion</a>
+                <a href="back.php?page=connexion">Connexion</a>
             <?php endif; ?>
             <?php if ($_GET['page'] == 'ajout-article') : ?>
                 <strong><a style="color:#17c1ff" >Ajout article</a></strong>
                     <?php else : ?>
-                        <a href="http://localhost:8888/ISSC%20-%202020/ISCC-2020-mydevblog/BACK-OFFICE/back.php?page=ajout-article">Ajout article</a>
+                        <a href="back.php?page=ajout-article">Ajout article</a>
                     <?php endif; ?>
                     <?php if ($_GET['page'] == 'ajout-utilisateur') : ?>
                 <strong><a style="color:#17c1ff" >Ajout utilisateur</a></strong>
                     <?php else : ?>
-                        <a href="http://localhost:8888/ISSC%20-%202020/ISCC-2020-mydevblog/BACK-OFFICE/back.php?page=ajout-utilisateur">Ajout utilisateur</a>
+                        <a href="back.php?page=ajout-utilisateur">Ajout utilisateur</a>
                     <?php endif; ?>
                     <?php if ($_GET['page'] == 'utilisateurs') : ?>
                         <strong><a style="color:#17c1ff" >Utilisateurs</a></strong>
                             <?php else : ?>
-                                <a href="http://localhost:8888/ISSC%20-%202020/ISCC-2020-mydevblog/BACK-OFFICE/back.php?page=utilisateurs">Utilisateurs</a>
+                                <a href="back.php?page=utilisateurs">Utilisateurs</a>
                             <?php endif; ?>
 
 

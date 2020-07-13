@@ -13,17 +13,17 @@
             <?php if ($_GET['page'] == 'accueil') : ?>
                 <strong><a style="color:#17c1ff" >Accueil</a></strong>
             <?php else : ?>
-                <a href="http://localhost:8888/ISSC%20-%202020/ISCC-2020-mydevblog/FRONT-OFFICE/front.php?page=accueil">Accueil</a>
+                <a href="front.php?page=accueil">Accueil</a>
             <?php endif; ?>
             <?php if ($_GET['page'] == 'articles') : ?>
                 <strong><a style="color:#17c1ff" >Articles</a></strong>
                     <?php else : ?>
-                        <a href="http://localhost:8888/ISSC%20-%202020/ISCC-2020-mydevblog/FRONT-OFFICE/front.php?page=articles">Articles</a>
+                        <a href="front.php?page=articles">Articles</a>
                     <?php endif; ?>
                     <?php if ($_GET['page'] == 'contact') : ?>
                         <strong><a style="color:#17c1ff" >Contact</a></strong>
                             <?php else : ?>
-                                <a href="http://localhost:8888/ISSC%20-%202020/ISCC-2020-mydevblog/FRONT-OFFICE/front.php?page=contact">Contact</a>
+                                <a href="front.php?page=contact">Contact</a>
                             <?php endif; ?>
 
 

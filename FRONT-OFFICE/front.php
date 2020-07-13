@@ -40,6 +40,8 @@
         include('page-contact.php');
     } elseif ($_GET['page'] == 'articles') {
         include('page-articles.php');
+    }elseif ($_GET['page']=='article'){
+        include('page-article.php');
     }
     ?>
 

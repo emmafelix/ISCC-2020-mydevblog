@@ -26,6 +26,12 @@ function articles($pdo){
     foreach ($articles as $article){
         echo '<h3><li>'.$article['titre'].'</li></h3>';
        echo '<p>'.$article['extrait'].'</p>';
+
+       $number_article=$article['id'];
+       ?>
+     
+       <a href="http://localhost:8888/ISSC%20-%202020/ISCC-2020-mydevblog/FRONT-OFFICE/front.php?page=article&id=<?php echo $number_article?>">Lire l'article en entier</a>
+       <?php
     }
     }
 $pdo=connect_to_database();

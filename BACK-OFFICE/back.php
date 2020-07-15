@@ -83,6 +83,8 @@
     <footer>
 <?php 
 if (isset($_SESSION['login'])==TRUE){echo 'Login: '.$_SESSION['login'];} ?>
+<br>
+<a href="../FRONT-OFFICE/front.php?page=accueil">Sortir de l'espace administration</a>
     </footer>
 </body>
 

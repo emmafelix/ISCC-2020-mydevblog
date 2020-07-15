@@ -35,10 +35,9 @@ $titre = addslashes($_POST['nom']);
             `articles`(`titre`,`image`,`datee`,`auteur`,`contenu`,`extrait`)
             VALUES('$titre','$photo','$date','$auteur','$contenu','$extrait')";
         $pdo->exec($sql);
+        header('Location: back.php?page=ajout-article');
         echo 'Article ajouté';}
-        else{
-          echo "L'article n'a pas pu être ajouté <br>";
-        }
+      
     } catch (PDOException $e) {
         echo 'Erreur ajout<br>'.$e->getMessage();
     }

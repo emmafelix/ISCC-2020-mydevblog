@@ -30,10 +30,9 @@ function ajout_utilisateur($pdo)
             utilisateurs (loginn,mdp)
             VALUES('$login','$password')";
         $pdo->exec($sql);
+        header('Location: back.php?page=ajout-utilisateur');
         echo 'Utilisateur ajouté';
-    }else{
-            echo "L'utilisateur n'a pas pû être ajouté";
-        }
+    }
     }catch (PDOException $e) {
         echo "Erreur ajout" . $e->getMessage();
     }

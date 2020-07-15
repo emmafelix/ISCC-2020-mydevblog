@@ -49,7 +49,7 @@
         <div class="imageep">
             <a href="https://fr.linkedin.com/in/emma-felix-5a4b86197"><img src="../ASSETS/Logo-LinkedIn.png" alt="logo linkedin lien vers page Linkedin FELIX Emma" width=70em> </a>
             <a href="https://github.com/emmafelix"><img src="../ASSETS/logo-github.png" alt="logo github lien vers page github FELIX Emma" width=70em> </a>
-            <a href="back.php">Espace administration</a>
+            <a href="../BACK-OFFICE/back.php?page=connexion">Espace administration</a>
     </footer>
 </body>
 

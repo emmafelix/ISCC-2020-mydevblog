@@ -39,7 +39,7 @@ function login($pdo)
         if ($password == $res[0]['mdp']) {
           echo "Connexion réussie : bon couple identifiant / mot de passe.";
           header('Location: back.php?page=ajout-article');
-   $_SESSION['login']=$login;
+  $_SESSION['login']=$login;
   $_SESSION['password']=$password;
 
         } 

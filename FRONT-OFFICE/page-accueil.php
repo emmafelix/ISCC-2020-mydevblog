@@ -38,6 +38,11 @@
     foreach ($articles as $article){
         echo '<h3><li>'.$article['titre'].'</li></h3>';
        echo '<p>'.$article['extrait'].'</p>';
+       $number_article=$article['id'];
+       ?>
+     
+       <a href="front.php?page=article&id=<?php echo $number_article?>">Consulter l'article</a>
+       <?php
     }
     }
 

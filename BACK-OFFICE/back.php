@@ -59,7 +59,6 @@
             <input type="text" placeholder="Titre de l'article" name="nom" /><br>
             <input type="file" accept="image/x-png,image/jpg,image/jpeg" name="photo" /><br>
             <input type="datetime-local" name="date" /><br>
-            <input type="texte" placeholder="Nom de l'auteur" name="auteur" /><br>
             <input type="text" placeholder="Article" name="contenu" /><br>
             <input type="text" placeholder="Extratit de l'article" name="extrait" /><br>
             <button type="submit" value="Envoyer">Publier l'article</button>

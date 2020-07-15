@@ -1,6 +1,6 @@
 <html>
     <body>
-        <form action="http://localhost:8888/ISSC%20-%202020/ISCC-2020-J08/EX_02/?page=contact-form" method="POST">
+        <form action="" method="POST">
             <div class="champs">
                 
                 <input type="text" placeholder="Nom - Prénom" name="nom">

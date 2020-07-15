@@ -1,4 +1,5 @@
 <?php
+session_start();
 function connect_to_database()
 {
   $servername = "localhost";
@@ -22,13 +23,13 @@ function ajout_article($pdo)
 $titre = addslashes($_POST['nom']);
     $photo = addslashes($_POST['photo']);
     $date=addslashes($_POST['date']);
-    $auteur=addslashes($_POST['auteur']);
+    $auteur=$_SESSION['login'];
     $contenu=addslashes($_POST['contenu']);
     $extrait=addslashes($_POST['extrait']);
 
     try {
 
-      if (!empty($_POST['nom']) && !empty($_POST['date']) && !empty($_POST['auteur']) && !empty($_POST['contenu']) && !empty($_POST['extrait'])){
+      if (!empty($_POST['nom']) && !empty($_POST['date']) && !empty($_POST['contenu']) && !empty($_POST['extrait'])){
         
         $sql = "INSERT INTO
             `articles`(`titre`,`image`,`datee`,`auteur`,`contenu`,`extrait`)

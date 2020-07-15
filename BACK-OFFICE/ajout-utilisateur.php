@@ -10,7 +10,6 @@ function connect_to_database()
         $pdo = new PDO("mysql:host=$servername;dbname=$databasename", $username, $password);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        echo "Vous êtes connectés <br>";
         return ($pdo);
     } catch (PDOException $e) {
         echo "La connexion a échoué" . $e->getMessage();
@@ -24,13 +23,19 @@ function ajout_utilisateur($pdo)
     $login = $_POST['login'];
     $password = $_POST['password'];
     try {
+    
+        if(!empty($_POST['login']) && !empty($_POST['password'])){
+
         $sql = "INSERT INTO
             utilisateurs (loginn,mdp)
             VALUES('$login','$password')";
         $pdo->exec($sql);
         echo 'Utilisateur ajouté';
-    } catch (PDOException $e) {
-        echo "La connexion a échoué" . $e->getMessage();
+    }else{
+            echo "L'utilisateur n'a pas pû être ajouté";
+        }
+    }catch (PDOException $e) {
+        echo "Erreur ajout" . $e->getMessage();
     }
 }
 

@@ -32,7 +32,7 @@
     $articles=$pdo->query("SELECT *
     FROM articles
     ORDER BY id DESC
-    LIMIT 2
+    LIMIT 5
     ")->fetchAll();
     
     foreach ($articles as $article){

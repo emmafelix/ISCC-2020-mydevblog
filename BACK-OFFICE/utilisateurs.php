@@ -10,11 +10,33 @@ function connect_to_database()
     $pdo = new PDO("mysql:host=$servername;dbname=$databasename", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    echo "Vous êtes connectés <br>";
     return($pdo);
   } catch (PDOException $e) {
     echo "La connexion a échoué" . $e->getMessage();
   }
 }
-connect_to_database();
+
+function afficher_utilisateurs($pdo){
+  $utilisateurs=$pdo->query("SELECT * FROM utilisateurs")->fetchAll();
+
+  echo'<ul>';
+  foreach($utilisateurs as $utilisateur){
+
+      echo '<li> Login: '.$utilisateur['loginn'].'. Mot de passe: '.$utilisateur['mdp'].
+      '<br>'
+      ?>
+      <form method="post" action="supprimer_utilisateur.php?id=<?php echo $utilisateur['id']?>">
+      <button type="submit" name="boutton_supprimer">Supprimer utilisateur</button>
+      </form>
+      </li>
+      
+<?php
+}
+  echo'</ul>';
+  
+}
+
+
+$pdo=connect_to_database();
+afficher_utilisateurs($pdo);
 ?>

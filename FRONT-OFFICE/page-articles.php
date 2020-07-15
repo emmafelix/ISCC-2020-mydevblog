@@ -30,7 +30,7 @@ function articles($pdo){
        $number_article=$article['id'];
        ?>
      
-       <a href="http://localhost:8888/ISSC%20-%202020/ISCC-2020-mydevblog/FRONT-OFFICE/front.php?page=article&id=<?php echo $number_article?>">Lire l'article en entier</a>
+       <a href="front.php?page=article&id=<?php echo $number_article?>">Lire l'article en entier</a>
        <?php
     }
     }

@@ -1,0 +1,102 @@
+@font-face{
+    font-family: "P";
+    src: url('../STYLE/font/GillSans.ttc');
+    font-size: 6em;
+}
+
+@font-face{
+    font-family: "H1";
+    src: url('../STYLE/font/Barnett.otf');
+    font-size: 30em;  
+}
+
+@font-face{
+    font-family: "H2";
+    src: url('../STYLE/font/Barnett.otf');
+    font-size: 20em;
+}
+
+@font-face{
+    font-family: "H3";
+    src: url('../STYLE/font/Signatra.otf');
+    font-size: 11em;
+}
+
+body{
+    font-family :"P";
+}
+
+h1{
+    font-family:"H1";
+}
+
+h2{
+    font-family:"H2";
+}
+
+h3{
+    font-family:"H3";
+}
+
+header{
+    height:100px;
+    background-color:salmon ; 
+    color:white; 
+    text-align:center;
+}
+
+footer{
+    height:5em;
+    background-color:salmon ; 
+    color:white; 
+    text-align:center;
+    vertical-align: middle;
+    padding:2%;    
+}
+
+.contenu{
+    width:70em;
+    vertical-align:middle;
+    margin-left: auto;
+    margin-right:auto;
+    background-color: seashell;
+    padding: 2%;
+}
+
+a{
+    text-decoration:none;
+    color:black;
+}
+a:hover{
+    color:saddlebrown;
+    }
+
+.a_lien_article{
+    font-style:italic;
+    text-decoration-color:salmon;
+}
+
+nav{
+    background-color:seashell;
+    color:black;
+    display:inline-block 100%;
+    padding-right:50px;
+    margin:0px;
+    text-align:right;
+    vertical-align: middle;  
+    text-transform:uppercase;
+}
+
+form{
+    outline: none;
+    width:300px;
+    padding:8px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:white;
+    border: solid 4px #e6e6e6;
+}
+
+.presentation{
+    text-align: center;
+}

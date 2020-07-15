@@ -5,6 +5,7 @@
         MyDevBlog - Administration
     </title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="../STYLE/style.css">
 </head>
 
 <body>
@@ -13,7 +14,7 @@
             <?php
             session_start();
              if ($_GET['page'] == 'connexion') : ?>
-                <strong><a style="color:#17c1ff">Connexion</a></strong>
+                <strong><a style="color:#fa8072">Connexion</a></strong>
             <?php else : ?>
                 <a href="back.php?page=connexion">Connexion</a>
             <?php endif; ?>
@@ -22,17 +23,17 @@
             ?>
             
                 <?php if ($_GET['page'] == 'ajout-article') : ?>
-                    <strong><a style="color:#17c1ff">Ajout article</a></strong>
+                    <strong><a style="color:#fa8072">Ajout article</a></strong>
                 <?php else : ?>
                     <a href="back.php?page=ajout-article">Ajout article</a>
                 <?php endif; ?>
                 <?php if ($_GET['page'] == 'ajout-utilisateur') : ?>
-                    <strong><a style="color:#17c1ff">Ajout utilisateur</a></strong>
+                    <strong><a style="color:#fa8072">Ajout utilisateur</a></strong>
                 <?php else : ?>
                     <a href="back.php?page=ajout-utilisateur">Ajout utilisateur</a>
                 <?php endif; ?>
                 <?php if ($_GET['page'] == 'utilisateurs') : ?>
-                    <strong><a style="color:#17c1ff">Utilisateurs</a></strong>
+                    <strong><a style="color:#fa8072">Utilisateurs</a></strong>
                 <?php else : ?>
                     <a href="back.php?page=utilisateurs">Utilisateurs</a>
             <?php endif;
@@ -60,7 +61,7 @@
             <input type="file" accept="image/x-png,image/jpg,image/jpeg" name="photo" /><br>
             <input type="datetime-local" name="date" /><br>
             <input type="text" placeholder="Article" name="contenu" /><br>
-            <input type="text" placeholder="Extratit de l'article" name="extrait" /><br>
+            <input type="text" placeholder="Extratit de l'article" name="extrait" maxlength="300"/><br>
             <button type="submit" value="Envoyer">Publier l'article</button>
         </form>
     <?php

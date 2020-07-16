@@ -1,11 +1,11 @@
 <div class="presentation">
-<p>Bienvenue sur MyDevBlog by Emma ! 
+<p><strong>Bienvenue sur MyDevBlog by Emma ! </strong>
     <br>Étudiante à l’ISEG Strasbourg, une école de marketing et de communication, je réalise une formation de codage avec EPITECH, une grande école d’informatique, afin d’améliorer mes notions en codage et développement Web. 
     <br>Ce blog va alors être dédié au partage des différentes techniques que je vais utiliser et que j’ai appris au long de cette formation. Si comme moi, vous voulez débuter le codage informatique et vous lancer dans le domaine du Web, n’hésitez pas à suivre les articles disponibles et avancer avec moi pas à pas ! </p>        
 </div>
-<h2>
+<h3>
     Les derniers articles
-</h2>  
+</h3>  
 <p>
     <?php
     function connect_to_database()
@@ -37,8 +37,8 @@
     ")->fetchAll();
     
     foreach ($articles as $article){
-        echo '<h3><li>'.$article['titre'].'</li></h3>';
-       echo '<p>'.$article['extrait'].'</p>';
+        echo '<h4><li>'.$article['titre'].'</li></h4>';
+       echo '<div class="extrait"><p>'.$article['extrait'].'</p></div>';
        $number_article=$article['id'];
        ?>
      

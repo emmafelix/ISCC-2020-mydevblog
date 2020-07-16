@@ -30,28 +30,35 @@
 
 
         </nav>
-
-        <h1>My Dev Blog</h1>
+<div class=h1>
+        <h1>My Dev Blog</h1></div>
     </header>
 <div class="contenu">
     <?php
     if ($_GET['page'] == 'accueil') {
-        include('page-accueil.php');
+         echo '<h2>Acceuil</h2>';
+         include('page-accueil.php');
+       
     } elseif ($_GET['page'] == 'contact') {
+         echo '<h2>Contact</h2>';
         include('page-contact.php');
+       
     } elseif ($_GET['page'] == 'articles') {
+        echo '<h2>Articles</h2>';
         include('page-articles.php');
+        
     }elseif ($_GET['page']=='article'){
         include('page-article.php');
     }
     ?>
 </div>
     <footer>
-        <div class="imageep">
+        <div class="footerentier">
+        <div class="footerpart1"><p>Retrouvez moi sur mes réseaux :</p>
             <a href="https://fr.linkedin.com/in/emma-felix-5a4b86197"><img src="../ASSETS/Logo-LinkedIn.png" alt="logo linkedin lien vers page Linkedin FELIX Emma" width=70em> </a>
-            <a href="https://github.com/emmafelix"><img src="../ASSETS/logo-github.png" alt="logo github lien vers page github FELIX Emma" width=70em> </a>
-            <a href="../BACK-OFFICE/back.php?page=connexion">Espace administration</a>
-    </footer>
+            <a href="https://github.com/emmafelix"><img src="../ASSETS/logo-github.png" alt="logo github lien vers page github FELIX Emma" width=70em> </a></div>
+            <div class="lien_footer"><a href="../BACK-OFFICE/back.php?page=connexion"><img src="../ASSETS/iconeentree.png" alt="lien vers espace administrateur" width=150px></a>
+   </div> </div></footer>
 </body>
 
 </html>

@@ -14,9 +14,9 @@
             <?php
             session_start();
              if ($_GET['page'] == 'connexion') : ?>
-                <strong><a style="color:#fa8072">Connexion</a></strong>
+                <strong><a style="color:#fa8072">Connexion  </a></strong>
             <?php else : ?>
-                <a href="back.php?page=connexion">Connexion</a>
+                <a href="back.php?page=connexion">Connexion  </a>
             <?php endif; ?>
 
             <?php if (isset($_SESSION['login'])==TRUE) {
@@ -25,27 +25,28 @@
                 <?php if ($_GET['page'] == 'ajout-article') : ?>
                     <strong><a style="color:#fa8072">Ajout article</a></strong>
                 <?php else : ?>
-                    <a href="back.php?page=ajout-article">Ajout article</a>
+                    <a href="back.php?page=ajout-article">Ajout article   </a>
                 <?php endif; ?>
                 <?php if ($_GET['page'] == 'ajout-utilisateur') : ?>
                     <strong><a style="color:#fa8072">Ajout utilisateur</a></strong>
                 <?php else : ?>
-                    <a href="back.php?page=ajout-utilisateur">Ajout utilisateur</a>
+                    <a href="back.php?page=ajout-utilisateur">Ajout utilisateur  </a>
                 <?php endif; ?>
                 <?php if ($_GET['page'] == 'utilisateurs') : ?>
-                    <strong><a style="color:#fa8072">Utilisateurs</a></strong>
+                    <strong><a style="color:#fa8072">Utilisateurs  </a></strong>
                 <?php else : ?>
-                    <a href="back.php?page=utilisateurs">Utilisateurs</a>
+                    <a href="back.php?page=utilisateurs">Utilisateurs  </a>
             <?php endif;
             } ?>
 
         </nav>
-
-        <h1>My Dev Blog</h1>
+        <div class=h1>
+        <h1>My Dev Blog</h1></div>
     </header>
-
+    <div class="contenu">
     <?php
     if ($_GET['page'] == 'connexion') {
+        echo "<h2>Connexion</h2>";
     ?>
         <form action="connexion.php" method="POST">
             <input type="text" placeholder="Nom d'utilisateur" name="login"><br>
@@ -55,6 +56,7 @@
     <?php
         include('connexion.php');
     } elseif ($_GET['page'] == 'ajout-article') {
+        echo "<h2>Ajoute un article !</h2>";
     ?>
         <form action="ajout-article.php" method="POST">
             <input type="text" placeholder="Titre de l'article" name="nom" /><br>
@@ -67,6 +69,7 @@
     <?php
         include('ajout-article.php');
     } elseif ($_GET['page'] == 'ajout-utilisateur') {
+        echo "<h2>Ajoute un utilisateur !</h2>";
     ?>
         <form action="ajout-utilisateur.php" method="POST">
             <input type="text" placeholder="Nom d'utilisateur" name="login"><br>
@@ -76,17 +79,19 @@
     <?php
         include('ajout-utilisateur.php');
     } elseif ($_GET['page'] == 'utilisateurs') {
+        echo "<h2>Utilisateurs</h2>";
 
         include('utilisateurs.php');
     }
     ?>
+    </div>
 
     <footer>
-<?php 
-if (isset($_SESSION['login'])==TRUE){echo 'Login: '.$_SESSION['login'];} ?>
-<br>
-<a href="../FRONT-OFFICE/front.php?page=accueil">Sortir de l'espace administration</a>
-    </footer>
+<div class="footer_back"><?php 
+if (isset($_SESSION['login'])==TRUE){echo 'Login: '.$_SESSION['login'].'<br>';} ?>
+
+<a href="../FRONT-OFFICE/front.php?page=accueil"><img src="../ASSETS/iconesortie.png" width="150px"></a>
+    </div></footer>
 </body>
 
 </html>

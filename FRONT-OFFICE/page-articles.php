@@ -24,13 +24,14 @@ function articles($pdo){
 
     
     foreach ($articles as $article){
-        echo '<h3><li>'.$article['titre'].'</li></h3>';
-       echo '<p>'.$article['extrait'].'</p>';
+        echo '<h4><li>'.$article['titre'].'</li></h4>';
+       echo '<p><div class="extrait">'.$article['extrait'].'</div></p>';
 
        $number_article=$article['id'];
        ?>
      
-       <a href="front.php?page=article&id=<?php echo $number_article?>">Lire l'article en entier</a>
+     <div class="a_lien_article"><a href="front.php?page=article&id=<?php echo $number_article?>">Lire l'article en entier</a>
+    </div>  
        <?php
     }
     }

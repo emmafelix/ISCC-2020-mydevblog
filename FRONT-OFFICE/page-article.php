@@ -27,8 +27,11 @@ function afficher_article_entier($pdo){
     WHERE id='$number_article'")->fetchAll();
 
 
-    echo '<h3>'.$articles[0]['titre'].'</h3>';
+    echo '<h4>'.$articles[0]['titre'].'</h4>';
     echo '<p>'.$articles[0]['contenu'].'</p>';
+    echo '<p><strong>Auteur: </strong>'.$articles[0]['auteur'];
+    echo '<br><strong>Date: </strong>'.$articles[0]['datee'].'</p>';
+
        
 }
 $pdo=connect_to_database();

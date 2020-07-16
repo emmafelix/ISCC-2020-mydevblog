@@ -1,25 +1,21 @@
 @font-face{
     font-family: "P";
     src: url('../STYLE/font/GillSans.ttc');
-    font-size: 6em;
 }
 
 @font-face{
     font-family: "H1";
-    src: url('../STYLE/font/Barnett.otf');
-    font-size: 30em;  
+    src: url('../STYLE/font/Signatra.otf'); 
 }
 
 @font-face{
     font-family: "H2";
-    src: url('../STYLE/font/Barnett.otf');
-    font-size: 20em;
+    src: url('../STYLE/font/Signatra.otf');
 }
 
 @font-face{
-    font-family: "H3";
-    src: url('../STYLE/font/Signatra.otf');
-    font-size: 11em;
+    font-family: "H4";
+    src: url('../STYLE/font/GillSans.ttc');
 }
 
 body{
@@ -28,39 +24,66 @@ body{
 
 h1{
     font-family:"H1";
+    font-size: 3.5rem;
+    vertical-align:top;
+    color:white;
 }
 
 h2{
     font-family:"H2";
+    Font-size:3rem;
+    text-align:center;
+    color:salmon;
+    background-color:white;
+   margin-right:-3%;
+   margin-left: -3%;
+   margin-top: -1.5%;
+   font-style: none;
+
+}
+h3{
+    font-family:"H2";
+    Font-size:2.3rem;
+    text-align:center;
+    color:salmon;
+    background-color:white;
+   margin-right:-3%;
+   margin-left: -3%;
+   margin-top: -1.5%;
+   font-style: none;   
 }
 
-h3{
-    font-family:"H3";
+h4{
+    font-family:"H4";
+    text-transform:uppercase;
+    font-size: 1.3rem;
+    color:indianred;
 }
 
 header{
-    height:100px;
+    height:135px;
     background-color:salmon ; 
-    color:white; 
     text-align:center;
+
 }
 
 footer{
-    height:5em;
+    height:6em;
     background-color:salmon ; 
     color:white; 
-    text-align:center;
-    vertical-align: middle;
-    padding:2%;    
+    padding:2%;   
 }
 
 .contenu{
-    width:70em;
+    width:70%;
     vertical-align:middle;
     margin-left: auto;
     margin-right:auto;
     background-color: seashell;
     padding: 2%;
+}
+header a{
+    padding:0.5%;
 }
 
 a{
@@ -80,11 +103,12 @@ nav{
     background-color:seashell;
     color:black;
     display:inline-block 100%;
-    padding-right:50px;
+    padding-right: 2%;
     margin:0px;
     text-align:right;
     vertical-align: middle;  
     text-transform:uppercase;
+    font-size: 1.5rem;
 }
 
 form{
@@ -93,10 +117,51 @@ form{
     padding:8px;
     margin-left:auto;
     margin-right:auto;
-    background-color:white;
-    border: solid 4px #e6e6e6;
+    background-color: seashell;
 }
 
 .presentation{
     text-align: center;
+}
+
+.extrait{
+    color:dimgray;
+}
+
+
+
+button:hover{
+    background-color:salmon;
+    color:white;
+    border:none;
+}
+
+
+input{
+    width:250px;
+    height: 30px;
+    border: solid 2px seashell;
+    margin:1%;
+}
+
+input:hover{
+    border:2px solid salmon;
+}
+
+.lien_footer{
+    text-align: right;
+    width:50%;
+}
+.footerpart1{
+    width:50%;
+}
+
+.footerentier{
+        display:flex;
+        flex-direction:row;
+        overflow:hidden;
+}
+
+.footer_back{
+    text-align:center;
 }

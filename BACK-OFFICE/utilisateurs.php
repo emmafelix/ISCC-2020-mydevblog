@@ -22,13 +22,11 @@ function afficher_utilisateurs($pdo){
   echo'<ul>';
   foreach($utilisateurs as $utilisateur){
 
-      echo '<li><strong> Login: </strong>'.$utilisateur['loginn'].'. <strong>Mot de passe: </strong>'.$utilisateur['mdp'].
-      '<br>'
+      echo '<li><strong> Login: </strong>'.$utilisateur['loginn'].'. <strong>Mot de passe: </strong>'.$utilisateur['mdp'].''
       ?>
       <form method="post" action="supprimer_utilisateur.php?id=<?php echo $utilisateur['id']?>">
       <button type="submit" name="boutton_supprimer">Supprimer utilisateur</button>
       </form>
-      </li>
       
 <?php
 }
